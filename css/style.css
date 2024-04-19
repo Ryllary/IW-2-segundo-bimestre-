@@ -1,0 +1,126 @@
+.thirteen h1 {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    width: auto;
+    text-align: center;
+    margin: 30px auto 20px auto; /* Reduzindo a distância do topo */
+    border: 2px solid #dbdbdb;
+    color: #dbdbdb;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.box-formulario {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #575f60;
+    padding: 30px 5% 60px 5%; /* Ajustando o padding */
+}
+
+.formulario {
+    background: #575f60;
+    padding: 0 5%; /* Ajustando o padding */
+    text-align: center;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="number"],
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    height: 41px;
+    padding: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: #575F60;
+    background: #E2C7BC;
+    border: 0;
+    border-radius: 3px;
+    outline: 0;
+    transition: all .3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.formulario select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.formulario textarea {
+    height: 78px;
+    resize: none;
+}
+
+.formulario input[type="text"]:focus,
+.formulario input[type="email"]:focus,
+.formulario input[type="number"]:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    color: #f5f5dc;
+    background: #951A1D;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifS;
+}
+
+.formulario label {
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+/* Botão */
+.box-btn { 
+    width: 100%;
+    max-width: 150px; /* Definindo um tamanho máximo para o botão */
+    margin: 20px auto 0 auto; /* Ajustando a margem */
+}
+
+.btn-3d {
+    width: 100%;
+    height: 41px; /* Altura igual à dos campos de entrada */
+    max-width: 150px; /* Definindo um tamanho máximo */
+    border: none;
+    cursor: pointer;
+    background-color: #8F9B9C;
+    color: #f5f5dc;
+    letter-spacing: 2px;
+    border-radius: 5px; /* Adicionando bordas arredondadas */
+    text-decoration: none;
+    position: relative;
+}
+
+.btn-3d:hover {
+    top: 3px;
+    left: -3px;
+    box-shadow: -3px 3px 0 #393939;
+}
+
+.btn-3d::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -4px;
+    width: 8px;
+    height: 8px;
+    background-color: #404040;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.btn-3d::before {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    right: 2px;
+    width: 8px;
+    height: 8px;
+    background-color: #404040;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+

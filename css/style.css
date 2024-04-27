@@ -1,126 +1,84 @@
-.thirteen h1 {
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    width: auto;
+body {
+    background: linear-gradient(to bottom, #000, #ccc);
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: #000;
+}
+
+h1 {
+    font-size: 28px;
     text-align: center;
-    margin: 30px auto 20px auto; /* Reduzindo a distância do topo */
-    border: 2px solid #dbdbdb;
-    color: #dbdbdb;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
-.box-formulario {
-    width: 80%;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #575f60;
-    padding: 30px 5% 60px 5%; /* Ajustando o padding */
-}
-
-.formulario {
-    background: #575f60;
-    padding: 0 5%; /* Ajustando o padding */
-    text-align: center;
-}
-
-.formulario input[type="text"],
-.formulario input[type="email"],
-.formulario input[type="number"],
-.formulario select,
-.formulario textarea {
-    width: 100%;
-    height: 41px;
-    padding: 10px;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
-    font-size: 1em;
-    color: #575F60;
-    background: #E2C7BC;
-    border: 0;
-    border-radius: 3px;
-    outline: 0;
-    transition: all .3s ease-in-out;
     margin-bottom: 20px;
+    color: #000;
 }
 
-.formulario select {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+form {
+    margin-top: 20px;
 }
 
-.formulario textarea {
-    height: 78px;
-    resize: none;
+.row {
+    margin-bottom: 15px;
 }
 
-.formulario input[type="text"]:focus,
-.formulario input[type="email"]:focus,
-.formulario input[type="number"]:focus,
-.formulario select:focus,
-.formulario textarea:focus {
-    color: #f5f5dc;
-    background: #951A1D;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serifS;
-}
-
-.formulario label {
+label {
+    font-size: 16px;
     display: block;
-    position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
-/* Botão */
-.box-btn { 
-    width: 100%;
-    max-width: 150px; /* Definindo um tamanho máximo para o botão */
-    margin: 20px auto 0 auto; /* Ajustando a margem */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+input#instagram {
+    width: calc(100% - 22px);
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
 }
 
-.btn-3d {
+input[type="submit"] {
     width: 100%;
-    height: 41px; /* Altura igual à dos campos de entrada */
-    max-width: 150px; /* Definindo um tamanho máximo */
+    padding: 10px;
+    font-size: 16px;
+    background-color: #000;
+    color: #fff;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
-    background-color: #8F9B9C;
-    color: #f5f5dc;
-    letter-spacing: 2px;
-    border-radius: 5px; /* Adicionando bordas arredondadas */
-    text-decoration: none;
-    position: relative;
 }
 
-.btn-3d:hover {
-    top: 3px;
-    left: -3px;
-    box-shadow: -3px 3px 0 #393939;
+input[type="submit"]:hover {
+    background-color: #333;
 }
 
-.btn-3d::after {
-    content: "";
-    position: absolute;
-    top: 2px;
-    left: -4px;
-    width: 8px;
-    height: 8px;
-    background-color: #404040;
-    transform: rotate(45deg);
-    z-index: 1;
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
 }
 
-.btn-3d::before {
-    content: "";
-    position: absolute;
-    bottom: -4px;
-    right: 2px;
-    width: 8px;
-    height: 8px;
-    background-color: #404040;
-    transform: rotate(45deg);
-    z-index: 1;
+.success {
+    color: green;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
 }
 
+input#instagram:focus {
+    border-color: #1DA1F2;
+    box-shadow: 0 0 5px rgba(29, 161, 242, 0.5);
+}

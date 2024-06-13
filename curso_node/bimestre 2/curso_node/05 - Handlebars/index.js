@@ -1,30 +1,26 @@
-const express = require('express')
-const app = express()
-// a variavel app será uma instância do módulo express
+const express = require('express');
+const app = express();
+const handlebars = require('handlebars')
+const Sequelize = require('sequelize')
 
-// transformando as variaveis que recebem os módulos em constantes
-// você evita que eles sejam reescritas durante a execução do
-// seu programa....
+        app.engine('handlebars',handlebars({defautlayout: 'main'}))
+        app.set('view engine' , 'handlebars')
 
-app.get("/",function(req,res){
-    res.sendFile(__dirname + "/paginas/index.html")
-})
-
-app.get("/sobre",function(req,res){
-    res.sendFile(__dirname + "/paginas/sobre.html")
-})
-
-app.get("/blog",function(req,res){
-    res.send("Pagina do Blog")
-})
-
-app.get("/ola/:cargo/:nome",function(req,res){
-    res.send("<h1>Ola "+ req.params.nome+"</h1><h2> Seu cargo e: " + req.params.cargo+"</h2>")
-    
-})
-
-// Abrindo um servidor com express
-// ESTA FUNÇÃO TEM QUE SER SEMPRE A ÚLTIMA LINHA DO SEU CÓDIGO
 app.listen(8081,function(){
-    console.log("Servidor rodando na url http://localhost:8081")
+    console.log('Servidor rodando em http://localhost:8081')
+})
+
+const { type } = require('express/lib/response')
+
+const sequelize = new Sequelize('test','root','',{
+    host: "localhost",
+    dialect: 'mysql'
+})
+
+app.get('/cadastro', function(req,res){
+    res.send('ROTA DE CADASTRO DE POSTS')
+})
+
+app.listen(8081,function(){
+    console.log("")
 })

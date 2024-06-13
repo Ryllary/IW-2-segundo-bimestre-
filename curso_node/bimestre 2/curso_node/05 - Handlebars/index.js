@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
-const handlebars = require('handlebars')
+const handlebars = require('express-handlebars')
 const Sequelize = require('sequelize')
 
-        app.engine('handlebars',handlebars({defautlayout: 'main'}))
+        app.engine('handlebars',handlebars.engine({defautlayout: 'main'}))
         app.set('view engine' , 'handlebars')
 
 app.listen(8081,function(){
@@ -18,9 +18,10 @@ const sequelize = new Sequelize('test','root','',{
 })
 
 app.get('/cadastro', function(req,res){
-    res.send('ROTA DE CADASTRO DE POSTS')
+    //res.send('ROTA DE CADASTRO DE POSTS')
+    res.render('formulario')
 })
 
 app.listen(8081,function(){
-    console.log("")
+    console.log("Servidor rodando na url http//localhost:8081")
 })
